@@ -1,0 +1,225 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-weight: 400;
+    color: white;
+    background-color: #4c4177;
+    background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+  }
+  
+  .container {
+    padding: 2rem;
+    padding-bottom: 400px;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .top-section {
+    text-align: center;
+    padding: 4rem 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .timeline {
+    position: relative;
+    min-height: 150px;
+  }
+  
+  .line {
+    position: absolute;
+    z-index: 2;
+    left: calc(50% - 1px);
+    width: 2px;
+    top: -50px;
+    bottom: -50px;
+    background-color: red;
+    display: none;
+  }
+  
+  .line:before,
+  .line:after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: red;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .line:after {
+    bottom: 0;
+  }
+  
+  .section {
+    display: flex;
+    opacity: 1;
+    transform: none;
+
+    .timeline-list {
+      padding: 0;
+      margin: 0;
+    }
+    
+    .timeline-list li {
+      list-style-type: none;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    .timeline-list li:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: #000;
+      border-radius: 50%;
+    }
+    
+    .timeline-list li:last-child {
+      margin-bottom: 0;
+    }
+    
+    
+    
+
+    /* Additional styles */
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section.show-me {
+    opacity: 1;
+    transform: none;
+    transition: opacity 500ms ease-in-out;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+  }
+  
+  h4 {
+    margin-top: 0;
+  }
+  
+  
+  .section p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .section .block {
+    margin-top: 2rem;
+  }
+  
+  .section .block h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .section .image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .section .image-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Small screens */
+
+  @media only screen and (max-width: 480px) {
+    .line,
+    .bead {
+      display: none;
+    }
+  }
+@media only screen and (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .top-section {
+    padding: 2rem 0;
+  }
+
+  .section {
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 1rem;
+  }
+
+  .line,
+  .line:before,
+  .line:after,
+  .bead {
+    display: none; /* Hide the line and beads */
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .top-section {
+    padding: 2rem 0;
+  }
+
+  .section {
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 1rem;
+  }
+
+  .line,
+  .line:before,
+  .line:after,
+  .bead {
+    display: none; /* Hide the line and beads */
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 768px) {
+  /* Add any specific styles for large screens here */
+}
