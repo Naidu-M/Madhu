@@ -558,7 +558,7 @@ span{
 }
 
 .experiences:hover {
-	background: var(--bg-color);
+	background: gold;
 	border-color: var(--shadow-color);
     color: black;
 }
@@ -679,7 +679,7 @@ span{
     transition: all 0.3s ease;
     }
     .certification .carousel .card:hover{
-    background: var(--color-primary);
+    background: gold;
     }
     .certification .carousel .card .box{
     display: flex;
